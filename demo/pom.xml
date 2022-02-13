@@ -21,6 +21,8 @@
     <exec.mainClass>com.example.Application</exec.mainClass>
     <micronaut.data.version>3.2.2</micronaut.data.version>
     <micronaut.runtime>netty</micronaut.runtime>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
   <repositories>
@@ -45,6 +47,12 @@
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.22</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -80,6 +88,14 @@
       <groupId>io.micronaut.data</groupId>
       <artifactId>micronaut-data-hibernate-jpa</artifactId>
       <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.rxjava2</groupId>
+      <artifactId>micronaut-rxjava2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.rxjava2</groupId>
+      <artifactId>micronaut-rxjava2-http-client</artifactId>
     </dependency>
     <dependency>
       <groupId>io.micronaut.security</groupId>
@@ -132,6 +148,11 @@
               <groupId>io.micronaut.data</groupId>
               <artifactId>micronaut-data-processor</artifactId>
               <version>${micronaut.data.version}</version>
+            </path>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombok.version}</version>
             </path>
             <path>
               <groupId>io.micronaut.security</groupId>
